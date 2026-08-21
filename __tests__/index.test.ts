@@ -24,7 +24,7 @@ test('should download page', async () => {
     .reply(200, '<h1>Hello, World!</h1>')
 
   const filePath = await loader('https://example.com', mkPath)
-  const dataSolutionFile = (await fs.readFile(filePath 'utf-8')).trim()
+  const dataSolutionFile = (await fs.readFile(filePath, 'utf-8')).trim()
   const expected = (await fs.readFile('./__tests__/__fixtures__/expected.html', 'utf-8')).trim()
   expect(dataSolutionFile).toBe(expected)
 })
