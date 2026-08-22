@@ -19,6 +19,7 @@
   },
   "scripts": {
     "test": "npx vitest run",
+    "test:types": "npx vitest typecheck",
     "build": "npx tsc --project ./tsconfig.build.json"
   },
   "devDependencies": {

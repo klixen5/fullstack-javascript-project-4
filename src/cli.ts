@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander'
 import process from 'process'
-import loader from './index.js'
+import loader from './loader.js'
 
 interface LoaderOptions {
   output: string
@@ -20,8 +20,9 @@ program
       console.error(`Ошибка: "${url}" не является корректным URL`)
       process.exit(1)
     }
+    
     loader(url, options.output)
-      .then((name) => console.log(name))
+      .then((fullPath) => console.log(fullPath))
       .catch((err: Error) => {
         console.log(`Ошибка: ${err.message}`)
         process.exit(1)
