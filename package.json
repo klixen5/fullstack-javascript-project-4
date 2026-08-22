@@ -18,7 +18,8 @@
     "page-loader": "./dist/cli.js"
   },
   "scripts": {
-    "test": "npx vitest run"
+    "test": "npx vitest run",
+    "build": "npx tsc --project ./tsconfig.build.json"
   },
   "devDependencies": {
     "@types/jest": "^30.0.0",

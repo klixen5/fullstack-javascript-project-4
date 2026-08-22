@@ -1,4 +1,5 @@
-export const getFileNameFromPath = (url: string) => {
+export const getFileNameFromUrl = (url: string): string => {
   const path = new URL(url)
-  return (path.hostname + path.pathname).replace(/[^a-zA-Z0-9]/g, '-') + '.html'
+  const pathname = path.pathname === '/' ? '' : path.pathname
+  return (path.hostname + pathname).replace(/[^a-zA-Z0-9]/g, '-') + '.html'
 }

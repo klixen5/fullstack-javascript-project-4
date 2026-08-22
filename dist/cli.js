@@ -9,6 +9,18 @@ program
     .argument('<url>', 'Ссылка на страницу')
     .option('-o, --output <dir>', 'output dir (default: "/home/user/current-dir")', process.cwd())
     .action((url, options) => {
-    loader(url, options.output).then((name) => console.log(name));
+    try {
+        new URL(url);
+    }
+    catch {
+        console.error(`Ошибка: "${url}" не является корректным URL`);
+        process.exit(1);
+    }
+    loader(url, options.output)
+        .then((name) => console.log(name))
+        .catch((err) => {
+        console.log(`Ошибка: ${err.message}`);
+        process.exit(1);
+    });
 })
     .parse(process.argv);

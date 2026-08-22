@@ -1,8 +1,14 @@
-import { getFileNameFromPath } from './utils.js';
+import { getFileNameFromUrl } from './utils.js';
 import fileWritter from './fileWritter.js';
 import fetcher from './fetcher.js';
-export default (url, path) => {
-    const fileName = getFileNameFromPath(url);
+import path from 'node:path';
+const loader = (url, dirPath) => {
+    const fileName = getFileNameFromUrl(url);
+    const fullPath = path.join(dirPath, fileName);
     return fetcher(url)
-        .then(data => fileWritter(fileName, data));
+        .then(data => {
+        return fileWritter(fullPath, data);
+    })
+        .then(() => fullPath);
 };
+export default loader;

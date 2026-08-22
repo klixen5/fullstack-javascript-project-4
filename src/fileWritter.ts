@@ -1,5 +1,5 @@
 import fs from 'fs/promises'
 
-export default (path: string, data: string) => {
-  return fs.writeFile(path, data).then(() => path)
+export default (path: string, data: string): Promise<void> => {
+  return fs.writeFile(path, data)
 }
