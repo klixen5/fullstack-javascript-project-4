@@ -20,7 +20,6 @@ program
       console.error(`Ошибка: "${url}" не является корректным URL`)
       process.exit(1)
     }
-    
     loader(url, options.output)
       .then((fullPath) => console.log(fullPath))
       .catch((err: Error) => {

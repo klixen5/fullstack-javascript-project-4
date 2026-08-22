@@ -1,7 +1,7 @@
 #!/usr/bin/env node
 import { program } from 'commander';
 import process from 'process';
-import loader from './index.js';
+import loader from './loader.js';
 program
     .name('page-loader')
     .description('Page loader utility')
@@ -17,7 +17,7 @@ program
         process.exit(1);
     }
     loader(url, options.output)
-        .then((name) => console.log(name))
+        .then((fullPath) => console.log(fullPath))
         .catch((err) => {
         console.log(`Ошибка: ${err.message}`);
         process.exit(1);
