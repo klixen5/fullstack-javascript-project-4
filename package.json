@@ -1,0 +1,24 @@
+{
+  "name": "page-loader",
+  "version": "1.0.0",
+  "description": "[![hexlet-check](https://github.com/klixen5/fullstack-javascript-project-4/actions/workflows/hexlet-check.yml/badge.svg)](https://github.com/klixen5/fullstack-javascript-project-4/actions)",
+  "homepage": "https://github.com/klixen5/fullstack-javascript-project-4#readme",
+  "bugs": {
+    "url": "https://github.com/klixen5/fullstack-javascript-project-4/issues"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/klixen5/fullstack-javascript-project-4.git"
+  },
+  "license": "ISC",
+  "author": "",
+  "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "devDependencies": {
+    "@types/node": "^26.6.4",
+    "typescript": "^7.0.2"
+  }
+}
