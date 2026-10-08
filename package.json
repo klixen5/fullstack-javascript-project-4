@@ -15,7 +15,7 @@
   "type": "module",
   "main": "index.js",
   "bin": {
-    "page-loader":
+    "page-loader": "./dist/cli.js"
   },
   "scripts": {
     "lint": "eslint .",
@@ -30,6 +30,7 @@
     "typescript-eslint": "^8.71.1"
   },
   "dependencies": {
+    "axios": "^1.20.0",
     "commander": "^15.0.0"
   }
 }
