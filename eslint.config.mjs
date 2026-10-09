@@ -4,7 +4,7 @@ import tseslint from 'typescript-eslint';
 import stylistic from '@stylistic/eslint-plugin';
 
 export default defineConfig({
-  files: ['src/**/*.ts'],
+  files: ['src/**/*.ts', '__tests__/**/*.ts'],
 
   extends: [
     js.configs.recommended,
