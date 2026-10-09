@@ -4,7 +4,7 @@ import path from 'node:path';
 import { Command, Option } from 'commander';
 
 
-import downLoadHtml from './downloadPage.js';
+import downLoadHtml from './downloadHtml.js';
 import saveFile from './storage.js';
 import { generateFilename } from './utils.js';
 
