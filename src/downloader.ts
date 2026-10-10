@@ -1,6 +1,6 @@
 import axios from 'axios';
 
-function downLoadHtml(url: string): Promise<string> {
+function downloader(url: string): Promise<string> {
   const response = axios
     .get<string>(url, {
       responseType: 'text',
@@ -13,4 +13,6 @@ function downLoadHtml(url: string): Promise<string> {
     .then((axiosResponse) => axiosResponse.data);
 }
 
-export default downLoadHtml;
+export  {
+  downloader,
+};

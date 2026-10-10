@@ -5,7 +5,7 @@ import nock from 'nock';
 
 import { it, expect, beforeEach, afterEach } from 'vitest';
 
-import downloadHtml from '../src/downloadHtml.js';
+import { downloadHtml } from '../src/downloader.js';
 
 const { dirname } = import.meta;
 const getFixture = (filename: string): string => path.join(dirname, '__fixtures__', filename);
