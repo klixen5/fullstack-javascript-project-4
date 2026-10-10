@@ -3,8 +3,7 @@
 import path from 'node:path';
 import { Command, Option } from 'commander';
 
-
-import downloader from './downloader.js';
+import { downloadHtml } from './downloader.js';
 import saveFile from './storage.js';
 import { generateFilename } from './utils.js';
 
@@ -21,7 +20,7 @@ program
   .argument('<url>')
   .action((url: string, options: Options) => {
     const fileName = path.join(path.resolve(options.output), generateFilename(url, 'html'));
-    downloader(url)
+    downloadHtml(url)
       .then((data) => saveFile(fileName, data))
       .then(() => console.log('success'));
   });
